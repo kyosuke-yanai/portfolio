@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <title>portfolio</title>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="header-area">
+                <div class="logo"><a href="">LOGOが入ります</a></div>
+                <nav class="nav-area">
+                    <ul class="nav-items">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="">Skills</a></li>
+                        <li><a href="">Works</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main class="main">
+            <section class="top-image">
+                <img src="images/top.jpeg" alt="top">
+                <h1>ポートフォリオ</h1>
+            </section>
+            <section class="about">
+                <h2 class="section-title" id="about">About</h2>
+                <div class="a-contents">
+                    <div class="a-main">
+                        <h3 class="a-title">Kyosuke Yanai</h3>
+                        <div class="a-text">
+                            aaa<br>
+                            bbb<br>
+                            ccc<br>
+                            ddd<br>
+                            eee<br>
+                        </div>
+                    </div>
+                    <div class="a-img">
+                        <img src="images/about-top.jpg" alt="about-top">
+                    </div>
+                </div>
+            </section>
+            <section class="skills">
+                <h2 class="section-title">Skills</h2>
+                <div class="s-contents">
+                    <ul>
+                        <li>
+                            <h3 class="s-title">営業</h3>
+                            <div class="s-icon">
+                                <img src="images/sales-img.png" alt="sales-icon">
+                            </div>
+                            <div class="s-text">
+                                aaa<br>
+                                bbb<br>
+                                ccc<br>
+                                ddd<br>
+                                eee<br>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="s-title">Python</h3>
+                            <div class="s-icon">
+                                <i class="lab la-python la-4x"></i>
+                            </div>
+                            <div class="s-text">
+                                aaa<br>
+                                bbb<br>
+                                ccc<br>
+                                ddd<br>
+                                eee<br>
+                            </div>
+                        </li>
+                        <li>
+                            <h3 class="s-title">コーディング</h3>
+                            <div class="s-icon">
+                                <i class="las la-code la-4x"></i>
+                            </div>
+                            <div class="s-text">
+                                aaa<br>
+                                bbb<br>
+                                ccc<br>
+                                ddd<br>
+                                eee<br>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="works">
+                <h2 class="section-title">Works</h2>
+                <div class="w-contents">
+                    <ul>
+                        <li><a href=""><img src="images/works-comingsoon.png" alt="works-images1"> </a></li>
+                        <li><a href=""><img src="images/works-comingsoon.png" alt="works-images2"> </a></li>
+                        <li><a href=""><img src="images/works-comingsoon.png" alt="works-images3"> </a></li>
+                        <li><a href=""><img src="images/works-comingsoon.png" alt="works-images4"> </a></li>
+                        <li><a href=""><img src="images/works-comingsoon.png" alt="works-images5"> </a></li>
+                        <li><a href=""><img src="images/works-comingsoon.png" alt="works-images6"> </a></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="scrollTop">
+                <i class="las la-angle-double-up la-3x" v-on:click="scrollTop"></i>
+            </section>
+        </main>
+        <footer class="footer">
+            <nav class="nav-area">
+                <ul class="nav-items">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Skills</a></li>
+                    <li><a href="">Works</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </nav>
+            <p>© Kyosuke All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            methods: {
+                scrollTop: function () {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
