@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
     <title>portfolio</title>
 </head>
 
@@ -18,10 +20,10 @@
                 <div class="logo"><a href="">LOGOが入ります</a></div>
                 <nav class="nav-area">
                     <ul class="nav-items">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="">Skills</a></li>
-                        <li><a href="">Works</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#" v-scroll-to="toAbout">About</a></li>
+                        <li><a href="#" v-scroll-to="toSkills">Skills</a></li>
+                        <li><a href="#" v-scroll-to="toWorks">Works</a></li>
+                        <li><a href="#" v-scroll-to="toContact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -50,7 +52,7 @@
                 </div>
             </section>
             <section class="skills">
-                <h2 class="section-title">Skills</h2>
+                <h2 class="section-title" id="skills">Skills</h2>
                 <div class="s-contents">
                     <ul>
                         <li>
@@ -96,7 +98,7 @@
                 </div>
             </section>
             <section class="works">
-                <h2 class="section-title">Works</h2>
+                <h2 class="section-title" id="works">Works</h2>
                 <div class="w-contents">
                     <ul>
                         <li><a href=""><img src="images/works-comingsoon.png" alt="works-images1"> </a></li>
@@ -109,16 +111,16 @@
                 </div>
             </section>
             <section class="scrollTop">
-                <i class="las la-angle-double-up la-3x" v-on:click="scrollTop"></i>
+                <a href="#" v-scroll-to="toTop"><i class="las la-angle-double-up la-3x"></i></a>
             </section>
         </main>
         <footer class="footer">
             <nav class="nav-area">
                 <ul class="nav-items">
-                    <li><a href="">About</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Works</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#" v-scroll-to="toAbout">About</a></li>
+                    <li><a href="#" v-scroll-to="toSkills">Skills</a></li>
+                    <li><a href="#" v-scroll-to="toWorks">Works</a></li>
+                    <li><a href="#" v-scroll-to="toContact">Contact</a></li>
                 </ul>
             </nav>
             <p>© Kyosuke All Rights Reserved.</p>
@@ -128,13 +130,12 @@
     <script>
         new Vue({
             el: '#app',
-            methods: {
-                scrollTop: function () {
-                    window.scrollTo({
-                        top: 0,
-                        behavior: "smooth"
-                    });
-                }
+            data: {
+                toTop: "#app",
+                toAbout: "#about",
+                toSkills: "#skills",
+                toWorks: "#works",
+                toContact: "#contact",
             }
         })
     </script>
